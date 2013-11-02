@@ -71,12 +71,12 @@ class BobTests(unittest.TestCase):
 
     def test_shouting_with_umlauts(self):
         self.assertEqual(
-            'Woah, chill out!', self.bob.hey("\xdcML\xc4\xdcTS!")
+            'Woah, chill out!', self.bob.hey(u"\xdcML\xc4\xdcTS!")
         )
 
     def test_calmly_speaking_with_umlauts(self):
         self.assertEqual(
-            'Whatever.', self.bob.hey("\xdcML\xe4\xdcTS!")
+            'Whatever.', self.bob.hey(u"\xdcML\xe4\xdcTS!")
         )
 
     def test_shouting_with_no_exclamation_mark(self):

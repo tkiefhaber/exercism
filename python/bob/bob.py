@@ -4,11 +4,11 @@ class Bob:
 
   def hey(self, input):
     import re
-    if input == None:
-      return 'Fine. Be that way!'
-    elif input == input.upper():
+    if input == None or input.strip() == '':
+        return 'Fine. Be that way!'
+    elif input.isupper():
       return 'Woah, chill out!'
-    elif re.search('\?', input):
+    elif input.endswith('?'):
       return 'Sure.'
     else:
       return 'Whatever.'
