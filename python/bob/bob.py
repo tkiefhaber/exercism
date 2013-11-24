@@ -3,7 +3,6 @@ class Bob:
     self
 
   def hey(self, input):
-    import re
     if input == None or input.strip() == '':
         return 'Fine. Be that way!'
     elif input.isupper():
